@@ -1,0 +1,1432 @@
+/* ==========================================================================
+   GARAGEM DOS REPASSES - MAIN STYLESHEET
+   High-Performance Automotive Luxury & Elite Presentation
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Reset & Global Foundations
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-darkest);
+  color: var(--color-titanium-200);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-darkest);
+  color: var(--color-titanium-300);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Container & Grid */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow {
+  max-width: 1020px;
+}
+
+section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Typography Foundations */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-display);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+}
+
+p {
+  color: var(--color-titanium-400);
+  font-weight: 400;
+}
+
+.text-gradient-crimson,
+.text-crimson {
+  color: var(--color-crimson);
+}
+
+.text-gradient-gold,
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-gradient-silver,
+.text-silver {
+  color: #FFFFFF;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-crimson);
+  margin-bottom: 12px;
+}
+
+.section-kicker.gold {
+  color: var(--color-gold);
+}
+
+.section-kicker.silver {
+  color: var(--color-titanium-400);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px auto;
+}
+
+.section-header .eyebrow-badge {
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-titanium-400);
+}
+
+/* --------------------------------------------------------------------------
+   Header & Floating Island Navbar
+   -------------------------------------------------------------------------- */
+.header-wrapper {
+  position: fixed;
+  top: 18px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  pointer-events: none;
+  /* Evita overflow horizontal em telas pequenas */
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+.navbar-island {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1160px;
+  min-width: 0; /* permite encolher abaixo do conteúdo */
+  height: 68px;
+  padding: 8px 12px 8px 20px;
+  background: rgba(11, 13, 18, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.75), 0 0 20px rgba(255, 30, 39, 0.08);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  overflow: hidden;
+}
+
+.navbar-island.scrolled {
+  background: rgba(8, 9, 12, 0.92);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.9);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  transition: transform var(--transition-fast);
+}
+
+.nav-brand:hover .nav-logo-img {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-titanium-400);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-crimson);
+  transition: width var(--transition-normal);
+  border-radius: var(--radius-full);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Mobile Hamburger */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #ffffff;
+}
+
+.hamburger-box {
+  width: 26px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-toggle.active .hamburger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active .hamburger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Menu Drawer */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 7, 9, 0.96);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-spring);
+}
+
+.mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-crimson);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: var(--bg-darkest);
+  overflow: hidden;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-video,
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.62;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(11, 13, 18, 0.28) 0%, var(--bg-darkest) 85%),
+              linear-gradient(to bottom, rgba(6,7,9,0.5) 0%, transparent 40%, var(--bg-darkest) 100%);
+}
+
+.hero-speed-lines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(255, 30, 39, 0.02) 120px, rgba(255, 30, 39, 0.02) 121px);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.015em;
+  margin-top: 24px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.hero-subheadline {
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--color-titanium-400);
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* Botões hero com largura igual */
+.hero-btn {
+  min-width: 260px;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .hero-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Trust Strip — Marquee Animado */
+.trust-strip {
+  position: relative;
+  z-index: 10;
+  background: #080A0F;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  overflow: hidden;
+  overflow-anchor: none;
+}
+
+/* Fade nas bordas */
+.trust-strip::before,
+.trust-strip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.trust-strip::before {
+  left: 0;
+  background: linear-gradient(to right, #080A0F, transparent);
+}
+.trust-strip::after {
+  right: 0;
+  background: linear-gradient(to left, #080A0F, transparent);
+}
+
+.trust-marquee-track {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.trust-marquee-inner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  animation: marqueeScroll 36s linear infinite;
+  will-change: transform;
+  flex-shrink: 0;
+  overflow-anchor: none;
+}
+
+.trust-marquee-inner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.trust-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 28px;
+  flex-shrink: 0;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.trust-item-icon {
+  color: var(--color-crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-item-icon.gold {
+  color: var(--color-gold);
+}
+
+.trust-item-val {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.trust-item-label {
+  font-size: 0.74rem;
+  color: var(--color-titanium-500);
+  margin-top: 3px;
+  line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   Showroom / Vitrine de Repasses Section
+   -------------------------------------------------------------------------- */
+.showroom-section {
+  background: var(--bg-main);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.showroom-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 40px;
+  padding: 16px 20px;
+  background: rgba(17, 20, 29, 0.5);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+}
+
+.search-box {
+  position: relative;
+  min-width: 260px;
+  flex: 1;
+  max-width: 380px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 16px 10px 42px;
+  border-radius: var(--radius-full);
+  background: rgba(6, 7, 9, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--color-crimson);
+  box-shadow: 0 0 0 2px rgba(255, 30, 39, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-titanium-500);
+  pointer-events: none;
+}
+
+/* Vehicles Grid */
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  gap: 28px;
+}
+
+.vehicle-card {
+  height: 100%;
+}
+
+.vehicle-thumb-box {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  background: #121318;
+}
+
+.vehicle-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s var(--ease-spring);
+}
+
+.vehicle-card:hover .vehicle-thumb {
+  transform: none;
+}
+
+/* Galeria horizontal: as fotos são vistas arrastando para os lados */
+.vehicle-card-carousel,
+.vehicle-gallery {
+  position: relative;
+  background: #000;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.vehicle-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.36s var(--ease-spring);
+}
+
+.vehicle-carousel-track.is-dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+.vehicle-carousel-slide {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #121318;
+}
+
+.vehicle-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.vehicle-gallery-navigation {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.vehicle-gallery-counter {
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.vehicle-gallery-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.vehicle-gallery-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.48);
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.vehicle-gallery-dot.is-active {
+  width: 18px;
+  border-radius: 999px;
+  background: var(--color-crimson);
+}
+
+.vehicle-modal-carousel {
+  aspect-ratio: 4 / 3;
+  max-height: 460px;
+  overflow: hidden;
+}
+
+.vehicle-detail-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: -4px 0 22px;
+  color: var(--color-titanium-400);
+  font-size: 0.82rem;
+}
+
+.vehicle-detail-facts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vehicle-detail-facts svg {
+  color: var(--color-crimson);
+}
+
+.vehicle-status-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+
+.vehicle-category-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-titanium-300);
+}
+
+.vehicle-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.vehicle-title {
+  font-size: 1.28rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Specs Pills Row */
+.specs-pills-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.spec-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 8px 6px;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.72rem;
+  color: var(--color-titanium-400);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spec-pill svg {
+  color: var(--color-crimson);
+}
+
+/* Pricing Matrix Box */
+.pricing-matrix {
+  padding: 16px 16px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(6, 7, 9, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 18px;
+}
+
+.pricing-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-titanium-500);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pricing-main-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.pricing-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.fipe-comparison {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  font-size: 0.76rem;
+}
+
+.fipe-label {
+  color: var(--color-titanium-500);
+  font-weight: 600;
+}
+
+.fipe-val {
+  text-decoration: line-through;
+  color: var(--color-titanium-500);
+}
+
+.pricing-note {
+  color: var(--color-titanium-500);
+  font-size: 0.74rem;
+}
+
+.repasse-price {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.savings-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 0;
+  color: #34D399;
+  font-size: 0.74rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.vehicle-actions-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.vehicle-actions-row .btn-primary {
+  min-height: 44px;
+}
+
+/* --------------------------------------------------------------------------
+   Express Valuation Simulator ("Venda Seu Carro Rápido")
+   -------------------------------------------------------------------------- */
+.simulator-section {
+  position: relative;
+  background: radial-gradient(100% 100% at 50% 10%, rgba(255, 30, 39, 0.05) 0%, var(--bg-darkest) 100%);
+}
+
+.simulator-card-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.simulator-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.simulator-highlight-quote {
+  padding: 16px 20px;
+  background: rgba(245, 158, 11, 0.06);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 28px;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--color-titanium-200);
+}
+
+/* --------------------------------------------------------------------------
+   Bento Grid: The 4 Pillars
+   -------------------------------------------------------------------------- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.bento-col-8 {
+  grid-column: span 8;
+}
+
+.bento-col-4 {
+  grid-column: span 4;
+}
+
+.bento-col-6 {
+  grid-column: span 6;
+}
+
+.bento-card {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.bento-card {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.pillar-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 14px;
+}
+
+.pillar-num {
+  font-family: var(--font-mono);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--color-crimson);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.pillar-num.gold {
+  color: var(--color-gold);
+}
+
+.bento-card-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.bento-card-text {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--color-titanium-400);
+}
+
+/* --------------------------------------------------------------------------
+   Social Proof & Real Google Reviews (5.0 Stars)
+   -------------------------------------------------------------------------- */
+.reviews-section {
+  background: var(--bg-main);
+}
+
+.google-verified-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 28px;
+  background: rgba(17, 20, 29, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  margin: 0 auto 50px auto;
+  width: fit-content;
+}
+
+.google-logo-svg {
+  height: 28px;
+  width: auto;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.stars-row {
+  display: flex;
+  gap: 4px;
+  color: var(--color-gold);
+  margin-bottom: 18px;
+}
+
+.review-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #ffffff;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.reviewer-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 30, 39, 0.3), rgba(245, 158, 11, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.review-verified-tag {
+  font-size: 0.75rem;
+  color: var(--color-whatsapp);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Location & Hours of Operation
+   -------------------------------------------------------------------------- */
+.location-section {
+  position: relative;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.location-info-card {
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.address-highlight {
+  margin: 24px 0;
+  padding: 20px;
+  background: rgba(6, 7, 9, 0.6);
+  border-left: 3px solid var(--color-crimson);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.address-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.cep-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-titanium-500);
+}
+
+/* Hours Table */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.hours-day {
+  color: var(--color-titanium-300);
+  font-weight: 500;
+}
+
+.hours-time {
+  text-align: right;
+  font-family: var(--font-mono);
+  color: #ffffff;
+}
+
+.hours-closed {
+  color: var(--color-crimson);
+  font-weight: 600;
+}
+
+.location-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+/* Stylized Map Card */
+.map-card-wrapper {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #11141D;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: none;
+}
+
+.map-badge-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 16px 20px;
+  background: rgba(11, 13, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   Floating WhatsApp Button
+   -------------------------------------------------------------------------- */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+.floating-whatsapp.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.whatsapp-bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+}
+
+.whatsapp-bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.whatsapp-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: pulseLive 2s infinite;
+}
+
+.whatsapp-tooltip {
+  padding: 8px 14px;
+  background: rgba(11, 13, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Vehicle Modal Details
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 7, 9, 0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  width: 100%;
+  max-width: 840px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--radius-lg);
+  position: relative;
+  transform: scale(0.95) translateY(20px);
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.modal-backdrop.active .modal-container {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: var(--color-crimson);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: #050608;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 80px 0 36px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-brand-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-titanium-500);
+  margin-top: 16px;
+  max-width: 360px;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  color: var(--color-titanium-400);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-crimson);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--color-titanium-600);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-telemetry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-col-8, .bento-col-4 {
+    grid-column: span 12;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+  }
+  .simulator-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .floating-whatsapp .whatsapp-tooltip {
+    display: none;
+  }
+  section {
+    padding: 70px 0;
+  }
+  /* Logo menor no mobile */
+  .nav-logo-img {
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-island {
+    padding: 6px 10px 6px 16px;
+    height: 60px;
+  }
+  .nav-logo-img {
+    height: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .pricing-meta-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .savings-pill {
+    white-space: normal;
+  }
+}

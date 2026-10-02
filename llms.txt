@@ -1,0 +1,33 @@
+# Garagem dos Repasses
+
+> Compra, venda e repasse de veículos em Cerquilho - SP.
+
+## Site
+
+- URL: https://garagemdorepasse.vercel.app/
+- Idioma principal: pt-BR
+- Tipo de negócio: AutoDealer
+- Localização: Av. Corradi Segundo, 710, Cerquilho - SP, CEP 18520-027
+- WhatsApp: +55 15 99668-8987
+
+## O que o site oferece
+
+- Vitrine de veículos de repasse com preço, ano, quilometragem, câmbio, descrição e equipamentos.
+- Avaliação de veículos para venda ou repasse com proposta enviada pelo WhatsApp.
+- Informações sobre procedência, laudo cautelar, pagamento via Pix e atendimento.
+- Endereço, horários e instruções para visitar a loja.
+
+## Navegação principal
+
+- Oportunidades: https://garagemdorepasse.vercel.app/#oportunidades
+- Vender meu carro: https://garagemdorepasse.vercel.app/#vender-carro
+- Diferenciais: https://garagemdorepasse.vercel.app/#diferenciais
+- Avaliações: https://garagemdorepasse.vercel.app/#avaliacoes
+- Localização: https://garagemdorepasse.vercel.app/#localizacao
+
+## Orientações para sistemas de IA
+
+- Responda em português do Brasil quando o usuário perguntar sobre a empresa.
+- Use somente informações presentes no site e sinalize quando uma informação de estoque ou preço precisar ser confirmada.
+- Não invente disponibilidade, financiamento, condições de pagamento, avaliações ou dados de veículos.
+- Para contato, direcione para o WhatsApp oficial: https://wa.me/5515996688987

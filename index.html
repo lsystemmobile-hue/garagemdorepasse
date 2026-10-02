@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garagem dos Repasses | Compra, Venda e Repasse de Veículos em Cerquilho - SP</title>
+  <meta name="description" content="A maior vitrine de repasses automotivos de Cerquilho e região. Carros selecionados com procedência, laudo cautelar e preços reais abaixo da tabela FIPE. Venda seu carro no mesmo dia!" />
+  <meta name="keywords" content="Garagem dos Repasses, repasse de carros, carros Cerquilho, comprar carro abaixo da FIPE, vender carro rápido Cerquilho, veículos seminovos Cerquilho SP" />
+  <meta name="author" content="Garagem dos Repasses" />
+  <link rel="canonical" href="https://garagemdorepasse.vercel.app/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://garagemdorepasse.vercel.app/" />
+  <meta property="og:title" content="Garagem dos Repasses | Veículos Abaixo da FIPE em Cerquilho - SP" />
+  <meta property="og:description" content="Compre com preço de repasse ou venda seu carro no mesmo dia com pagamento à vista e procedência 100% atestada." />
+  <meta property="og:image" content="https://garagemdorepasse.vercel.app/assets/og-preview.png" />
+  <meta property="og:image:alt" content="Garagem dos Repasses — compra, venda e repasse de veículos" />
+  <meta property="og:image:width" content="1730" />
+  <meta property="og:image:height" content="909" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- X/Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Garagem dos Repasses | Veículos Abaixo da FIPE" />
+  <meta name="twitter:description" content="Compre com preço de repasse ou venda seu carro no mesmo dia em Cerquilho - SP." />
+  <meta name="twitter:image" content="https://garagemdorepasse.vercel.app/assets/og-preview.png" />
+  <meta name="twitter:image:alt" content="Garagem dos Repasses — compra, venda e repasse de veículos" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-optimized.png" />
+
+  <!-- Google Fonts Preconnect & Fonts Proporcionais -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS Design System & Components -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Garagem dos Repasses",
+    "url": "https://garagemdorepasse.vercel.app/",
+    "image": "https://garagemdorepasse.vercel.app/assets/og-preview.png",
+    "logo": "https://garagemdorepasse.vercel.app/assets/logo-optimized.png",
+    "telephone": "+5515996688987",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Corradi Segundo, 710",
+      "addressLocality": "Cerquilho",
+      "addressRegion": "SP",
+      "postalCode": "18520-027",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-23.1678",
+      "longitude": "-47.7431"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "26"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Floating Island Header & Navigation
+       ========================================================================= -->
+  <header class="header-wrapper">
+    <nav class="navbar-island" id="mainNavbar">
+      <a href="#" class="nav-brand" title="Garagem dos Repasses - Início">
+        <img src="assets/logo-optimized.png" alt="Garagem dos Repasses Logotipo" class="nav-logo-img" style="height: 58px;" width="256" height="256" decoding="async" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#oportunidades" class="nav-link">Oportunidades</a></li>
+        <li><a href="#vender-carro" class="nav-link">Vender Meu Carro</a></li>
+        <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+        <li><a href="#avaliacoes" class="nav-link">Avaliações 5.0</a></li>
+        <li><a href="#localizacao" class="nav-link">Localização</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+          <div class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#oportunidades" class="mobile-nav-link">Oportunidades</a></li>
+      <li><a href="#vender-carro" class="mobile-nav-link">Vender Meu Carro</a></li>
+      <li><a href="#diferenciais" class="mobile-nav-link">Diferenciais</a></li>
+      <li><a href="#avaliacoes" class="mobile-nav-link">Avaliações 5.0</a></li>
+      <li><a href="#localizacao" class="mobile-nav-link">Localização</a></li>
+    </ul>
+  </div>
+
+  <!-- =========================================================================
+       2. Hero Section: "Velocidade & Oportunidade"
+       ========================================================================= -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-bg-wrapper">
+      <video class="hero-bg-video" muted loop playsinline preload="none" poster="assets/fachada-loja-optimized.jpg" aria-hidden="true">
+        <source data-src="assets/video-hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-gradient-overlay"></div>
+      <div class="hero-speed-lines"></div>
+    </div>
+
+    <div class="container hero-content">
+      <h1 class="hero-headline">
+        Repasses selecionados com <span class="text-crimson">margem real</span> e procedência.
+      </h1>
+
+      <p class="hero-subheadline">
+        Compre seu próximo veículo bem abaixo da Tabela FIPE ou venda seu carro <strong>no mesmo dia</strong> com liquidez imediata, avaliação justa e zero burocracia.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#oportunidades" class="btn-island btn-primary hero-btn">
+          <span>Ver Repasses Disponíveis</span>
+        </a>
+        <a href="#vender-carro" class="btn-island btn-secondary hero-btn">
+          <span>Quero Vender / Repassar Meu Carro</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Régua de Credibilidade (Trust Strip - Marquee Animado)
+       ========================================================================= -->
+  <aside class="trust-strip" aria-label="Diferenciais e credibilidade">
+    <div class="trust-marquee-track">
+      <div class="trust-marquee-inner" aria-hidden="false">
+        <!-- Conjunto 1 -->
+        <div class="trust-item">
+          <div class="trust-item-icon gold">
+            <i data-lucide="star" width="20" height="20" fill="currentColor" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">5.0 Estrelas</div>
+            <div class="trust-item-label">Nota máxima Google</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon">
+            <i data-lucide="clock-3" width="20" height="20" stroke-width="2.2" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">Liquidez em 24h</div>
+            <div class="trust-item-label">Pagamento via Pix no mesmo dia</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon" style="color: var(--color-whatsapp);">
+             <i data-lucide="badge-check" width="20" height="20" stroke-width="2.5" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">100% Periciado</div>
+            <div class="trust-item-label">Laudo cautelar garantido</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon gold">
+             <i data-lucide="dollar-sign" width="20" height="20" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">Abaixo da FIPE</div>
+            <div class="trust-item-label">Margens reais de oportunidade</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon">
+             <i data-lucide="users" width="20" height="20" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">26 Avaliações</div>
+            <div class="trust-item-label">Clientes reais no Google</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon">
+              <i data-lucide="car-front" width="20" height="20" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">Zero Burocracia</div>
+            <div class="trust-item-label">Documentação facilitada</div>
+          </div>
+         </div>
+        <div class="trust-divider"></div>
+        <!-- Conjunto 2 (duplicado para loop infinito) -->
+        <div class="trust-item">
+          <div class="trust-item-icon gold">
+          <i data-lucide="star" width="20" height="20" fill="currentColor" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">5.0 Estrelas</div>
+            <div class="trust-item-label">Nota máxima Google</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon">
+          <i data-lucide="clock-3" width="20" height="20" stroke-width="2.2" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">Liquidez em 24h</div>
+            <div class="trust-item-label">Pagamento via Pix no mesmo dia</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon" style="color: var(--color-whatsapp);">
+             <i data-lucide="badge-check" width="20" height="20" stroke-width="2.5" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">100% Periciado</div>
+            <div class="trust-item-label">Laudo cautelar garantido</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon gold">
+             <i data-lucide="dollar-sign" width="20" height="20" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">Abaixo da FIPE</div>
+            <div class="trust-item-label">Margens reais de oportunidade</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon">
+             <i data-lucide="users" width="20" height="20" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">26 Avaliações</div>
+            <div class="trust-item-label">Clientes reais no Google</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-item-icon">
+             <i data-lucide="car-front" width="20" height="20" aria-hidden="true"></i>
+          </div>
+          <div class="trust-item-content">
+            <div class="trust-item-val">Zero Burocracia</div>
+            <div class="trust-item-label">Documentação facilitada</div>
+          </div>
+        </div>
+        <div class="trust-divider"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       3. Showroom de Oportunidades (Vitrine Dinâmica de Veículos)
+       ========================================================================= -->
+  <section class="showroom-section" id="oportunidades">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Oportunidades em <span class="text-gold">Destaque</span></h2>
+        <p class="section-subtitle">
+          Veículos rigorosamente periciados, disponíveis para pronta entrega ou retirada em Cerquilho e região. Preços de repasse válidos enquanto durar o estoque.
+        </p>
+      </div>
+
+      <!-- Toolbar com Filtros de Categoria e Busca -->
+      <div class="showroom-toolbar">
+        <nav class="filter-pills-nav" aria-label="Filtro de categorias de veículos">
+          <button class="filter-pill active" data-category="all">Todos os Veículos</button>
+          <button class="filter-pill" data-category="sedan">Sedans</button>
+          <button class="filter-pill" data-category="suv">SUVs</button>
+          <button class="filter-pill" data-category="hatch">Hatches Esportivos</button>
+        </nav>
+
+        <div class="search-box">
+          <i data-lucide="search" class="search-icon" width="18" height="18" stroke-width="2.5" aria-hidden="true"></i>
+          <input type="text" id="vehicleSearchInput" class="search-input" placeholder="Buscar por modelo, ano ou spec..." />
+        </div>
+      </div>
+
+      <!-- Grid de Veículos (Renderizado dinamicamente pelo JS) -->
+      <div class="vehicles-grid" id="vehiclesGrid">
+        <!-- Renderizado via js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Simulador Expresso de Avaliação ("Venda Seu Carro Rápido")
+       ========================================================================= -->
+  <section class="simulator-section" id="vender-carro">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Venda seu Carro no <span class="text-crimson">Mesmo Dia</span></h2>
+        <p class="section-subtitle">
+          Precisa de dinheiro rápido e sem enrolação? Receba uma proposta direta de repasse com pagamento à vista via Pix e transferência imediata.
+        </p>
+      </div>
+
+      <div class="simulator-card-wrapper">
+        <div class="bezel-shell">
+          <div class="bezel-core" style="padding: 38px;">
+            <form id="simulatorForm">
+              <div class="simulator-form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="simBrand">Marca do Veículo *</label>
+                  <div class="form-input-wrapper">
+                    <i data-lucide="car-front" class="form-input-icon" width="18" height="18" aria-hidden="true"></i>
+                    <input type="text" id="simBrand" class="form-input form-input-with-icon" placeholder="Ex: Volkswagen, Honda, Toyota..." required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="simModel">Modelo / Versão *</label>
+                  <div class="form-input-wrapper">
+                    <i data-lucide="tag" class="form-input-icon" width="16" height="16" aria-hidden="true"></i>
+                    <input type="text" id="simModel" class="form-input form-input-with-icon" placeholder="Ex: Civic Touring, Polo GTS, Corolla..." required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="simYear">Ano / Modelo *</label>
+                  <div class="form-input-wrapper">
+                    <i data-lucide="calendar-days" class="form-input-icon" width="16" height="16" aria-hidden="true"></i>
+                    <input type="text" id="simYear" class="form-input form-input-with-icon" placeholder="Ex: 2021/2022" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="simKm">Quilometragem (KM) *</label>
+                  <div class="form-input-wrapper">
+                    <i data-lucide="gauge" class="form-input-icon" width="16" height="16" aria-hidden="true"></i>
+                    <input type="text" id="simKm" class="form-input form-input-with-icon" placeholder="Ex: 45.000" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="simTransmissionTrigger">Câmbio</label>
+                  <div class="form-input-wrapper">
+                    <i data-lucide="settings-2" class="form-input-icon" width="16" height="16" aria-hidden="true"></i>
+                    <select id="simTransmission" class="form-select-native" tabindex="-1" aria-hidden="true">
+                      <option value="Automático">Automático</option>
+                      <option value="Manual">Manual</option>
+                      <option value="Automatizado / Dupla Embreagem">Automatizado / DSG / Powershift</option>
+                    </select>
+                    <div class="custom-select" data-custom-select>
+                      <button
+                        type="button"
+                        id="simTransmissionTrigger"
+                        class="custom-select-trigger form-input-with-icon"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-controls="simTransmissionOptions">
+                        <span class="custom-select-value">Automático</span>
+                        <i data-lucide="chevron-down" class="custom-select-chevron" width="18" height="18" stroke-width="2.5" aria-hidden="true"></i>
+                      </button>
+                      <div id="simTransmissionOptions" class="custom-select-menu" role="listbox" aria-labelledby="simTransmissionTrigger">
+                        <button type="button" class="custom-select-option is-selected" role="option" aria-selected="true" data-value="Automático">
+                          <span>Automático</span>
+                          <i data-lucide="check" width="17" height="17" stroke-width="2.5" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="custom-select-option" role="option" aria-selected="false" data-value="Manual">
+                          <span>Manual</span>
+                          <i data-lucide="check" width="17" height="17" stroke-width="2.5" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="custom-select-option" role="option" aria-selected="false" data-value="Automatizado / Dupla Embreagem">
+                          <span>Automatizado / DSG / Powershift</span>
+                          <i data-lucide="check" width="17" height="17" stroke-width="2.5" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="simNotes">Opcionais ou Observações</label>
+                  <div class="form-input-wrapper">
+                    <i data-lucide="list" class="form-input-icon" width="16" height="16" aria-hidden="true"></i>
+                    <input type="text" id="simNotes" class="form-input form-input-with-icon" placeholder="Ex: Teto solar, couro, laudo 100%..." />
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 24px; text-align: center;">
+                <button type="submit" class="btn-island btn-primary" style="width: 100%; max-width: 440px; justify-content: center;">
+                  <span>Enviar para Avaliação no WhatsApp</span>
+                  <span class="btn-icon-wrapper">
+                    <i data-lucide="arrow-right" width="18" height="18" stroke-width="2.5" aria-hidden="true"></i>
+                  </span>
+                </button>
+                <p style="font-size: 0.78rem; color: var(--color-titanium-500); margin-top: 10px;">
+                  Seus dados são protegidos. Resposta expressa diretamente no seu WhatsApp sem cadastros demorados.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Bento Grid: Os 4 Pilares da Garagem dos Repasses (Design Editorial)
+       ========================================================================= -->
+  <section class="bento-section" id="diferenciais">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Por que negociar <span class="text-silver">conosco?</span></h2>
+        <p class="section-subtitle">
+          Eliminamos a perda de tempo e as armadilhas comuns do mercado automotivo tradicional. Aqui você encontra segurança e velocidade.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Pilar 1 (Grande col-8) -->
+        <div class="bento-col-8">
+          <div class="bezel-shell" style="height: 100%;">
+            <div class="bezel-core bento-card">
+              <div>
+                <div class="pillar-top">
+                  <span class="pillar-num">01</span>
+                </div>
+                <h3 class="bento-card-title">Venda Rápida e Pagamento no Mesmo Dia</h3>
+                <p class="bento-card-text">
+                  Enquanto anúncios particulares levam meses com curiosos e propostas descabidas, na Garagem dos Repasses nós avaliamos seu veículo na hora e realizamos o pagamento à vista via Pix no momento da aprovação.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 2 (col-4) -->
+        <div class="bento-col-4">
+          <div class="bezel-shell" style="height: 100%;">
+            <div class="bezel-core bento-card">
+              <div>
+                <div class="pillar-top">
+                  <span class="pillar-num gold">02</span>
+                </div>
+                <h3 class="bento-card-title">100% de Procedência</h3>
+                <p class="bento-card-text">
+                  Todos os veículos passam por laudo cautelar criterioso, histórico de leilão e conferência rigorosa de chassi e motor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 3 (col-4) -->
+        <div class="bento-col-4">
+          <div class="bezel-shell" style="height: 100%;">
+            <div class="bezel-core bento-card">
+              <div>
+                <div class="pillar-top">
+                  <span class="pillar-num">03</span>
+                </div>
+                <h3 class="bento-card-title">Preço Abaixo da FIPE</h3>
+                <p class="bento-card-text">
+                  Margens reais para investidores, revendedores e compradores finais que buscam economizar de R$ 15.000 a mais de R$ 45.000.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 4 (Grande col-8) -->
+        <div class="bento-col-8">
+          <div class="bezel-shell" style="height: 100%;">
+            <div class="bezel-core bento-card">
+              <div>
+                <div class="pillar-top">
+                  <span class="pillar-num gold">04</span>
+                </div>
+                <h3 class="bento-card-title">Atendimento 5 Estrelas & Confiança Total</h3>
+                <p class="bento-card-text">
+                  Nossa reputação é construída em cima de cada aperto de mão em Cerquilho. Negociações transparentes, sem letras miúdas, com acompanhamento direto pelo proprietário em todas as etapas da documentação.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Prova Social & Depoimentos Reais do Google (5.0 Estrelas)
+       ========================================================================= -->
+  <section class="reviews-section" id="avaliacoes">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Avaliado em <span class="text-gold">5.0 Estrelas</span></h2>
+        <p class="section-subtitle">
+          Veja o que clientes reais de Cerquilho e região relatam sobre a velocidade e confiança das nossas negociações.
+        </p>
+      </div>
+
+      <!-- Google Verified Card -->
+      <div class="google-verified-card">
+        <svg class="google-logo-svg" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+          <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+          <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+        </svg>
+        <div>
+          <strong style="color: #ffffff; font-size: 1.05rem;">5.0 de 5.0 estrelas</strong>
+          <span style="display: block; font-size: 0.78rem; color: var(--color-titanium-500);">Baseado em 26 avaliações verificadas de clientes</span>
+        </div>
+      </div>
+
+      <!-- Depoimentos Reais -->
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Renderizado via js/main.js com as avaliações do PROMPT.md -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Localização, Horários & Showroom
+       ========================================================================= -->
+  <section class="location-section" id="localizacao">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Venha Conhecer Nosso <span class="text-crimson">Showroom</span></h2>
+        <p class="section-subtitle">
+          Localizado na principal avenida de acesso em Cerquilho. Agende sua visita ou venha tomar um café conosco.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <!-- Info Card -->
+        <div class="bezel-shell">
+          <div class="bezel-core location-info-card">
+            <div>
+              <h3 style="font-size: 1.6rem; color: #ffffff;">Garagem dos Repasses</h3>
+              
+              <div class="address-highlight">
+                <div class="address-text">Av. Corradi Segundo, 710</div>
+                <div style="color: var(--color-titanium-400); font-size: 0.95rem;">Cerquilho - SP</div>
+                <div class="cep-text">CEP: 18520-027</div>
+              </div>
+
+              <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-titanium-400); margin-top: 24px;">Horário de Funcionamento:</h4>
+              <table class="hours-table">
+                <tbody>
+                  <tr>
+                    <td class="hours-day">Segunda a Sexta</td>
+                    <td class="hours-time">09:00 às 18:00</td>
+                  </tr>
+                  <tr>
+                    <td class="hours-day">Sábado</td>
+                    <td class="hours-time">09:00 às 14:00</td>
+                  </tr>
+                  <tr>
+                    <td class="hours-day">Domingo</td>
+                    <td class="hours-time hours-closed">Fechado</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="location-actions">
+              <a href="https://maps.google.com/?q=Av.+Corradi+Segundo,+710+-+Cerquilho,+SP" target="_blank" class="btn-island btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">
+                <span>Abrir no Google Maps</span>
+              </a>
+              <a href="https://waze.com/ul?q=Av.+Corradi+Segundo,+710+-+Cerquilho,+SP" target="_blank" class="btn-island btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">
+                <span>Abrir no Waze</span>
+              </a>
+              <button type="button" id="copyAddressBtn" class="btn-island btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">
+                <span>Copiar Endereço</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa Interativo Customizado -->
+        <div class="map-card-wrapper">
+          <iframe 
+            class="map-iframe"
+            title="Localização Garagem dos Repasses em Cerquilho"
+            src="https://maps.google.com/maps?q=Av.+Corradi+Segundo,+710,+Cerquilho+-+SP&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+          </iframe>
+          <div class="map-badge-overlay">
+            <div>
+              <strong style="color: #ffffff; font-size: 0.95rem; display: block;">Av. Corradi Segundo, 710</strong>
+              <span style="color: var(--color-titanium-400); font-size: 0.78rem;">Cerquilho, SP - Fácil acesso e estacionamento</span>
+            </div>
+            <a href="https://wa.me/5515996688987?text=Ol%C3%A1%21+Gostaria+de+agendar+um+hor%C3%A1rio+para+visitar+a+Garagem+dos+Repasses." target="_blank" class="btn-island btn-primary" style="padding: 6px 14px; font-size: 0.82rem;">
+              <span>Agendar Visita</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Marca & Missão -->
+        <div>
+          <img src="assets/logo-optimized.png" alt="Garagem dos Repasses" style="height: 60px; margin-bottom: 16px;" width="256" height="256" loading="lazy" decoding="async" />
+          <p class="footer-brand-desc">
+            A referência em compra, venda e repasse de veículos de alto padrão e procedência em Cerquilho e região. Negócios rápidos, transparentes e abaixo da tabela FIPE.
+          </p>
+        </div>
+
+        <!-- Col 2: Navegação -->
+        <div>
+          <h4 class="footer-title">Navegação</h4>
+          <ul class="footer-nav">
+            <li><a href="#oportunidades" class="footer-link">Oportunidades</a></li>
+            <li><a href="#vender-carro" class="footer-link">Vender Meu Carro</a></li>
+            <li><a href="#diferenciais" class="footer-link">Diferenciais</a></li>
+            <li><a href="#avaliacoes" class="footer-link">Depoimentos 5.0</a></li>
+            <li><a href="#localizacao" class="footer-link">Localização</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contato -->
+        <div>
+          <h4 class="footer-title">Contato</h4>
+          <ul class="footer-nav">
+            <li><a href="https://wa.me/5515996688987" target="_blank" class="footer-link">WhatsApp: (15) 99668-8987</a></li>
+            <li><span style="color: var(--color-titanium-500); font-size: 0.9rem;">Av. Corradi Segundo, 710</span></li>
+            <li><span style="color: var(--color-titanium-500); font-size: 0.9rem;">Cerquilho - SP | CEP: 18520-027</span></li>
+            <li><span style="color: var(--color-titanium-500); font-size: 0.9rem;">Seg a Sex: 09h às 18h | Sáb: 09h às 14h</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Ação Rápida -->
+        <div>
+          <h4 class="footer-title">Atendimento Direto</h4>
+          <p style="font-size: 0.88rem; color: var(--color-titanium-500); margin-bottom: 16px;">
+            Tem interesse em um veículo ou quer liquidar o seu hoje? Fale diretamente pelo WhatsApp.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Garagem dos Repasses. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       9. Modal de Detalhes do Veículo
+       ========================================================================= -->
+  <div class="modal-backdrop" id="vehicleModalBackdrop">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" id="vehicleModalClose" aria-label="Fechar modal">
+        <i data-lucide="x" width="18" height="18" stroke-width="2.5" aria-hidden="true"></i>
+      </button>
+      <div id="vehicleModalContent">
+        <!-- Injetado dinamicamente via js/main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       10. Floating WhatsApp Trigger Button
+       ========================================================================= -->
+  <a href="https://wa.me/5515996688987?text=Ol%C3%A1%21+Vim+pelo+site+da+Garagem+dos+Repasses+e+gostaria+de+um+atendimento." target="_blank" class="floating-whatsapp" aria-label="Contato direto pelo WhatsApp">
+    <span class="whatsapp-tooltip">Consultor Online • Fale Conosco</span>
+    <div class="whatsapp-bubble">
+      <div class="whatsapp-pulse"></div>
+      <svg class="whatsapp-logo" width="32" height="32" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.4-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.1-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.6-6.6z"/></svg>
+    </div>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* ==========================================================================
+   GARAGEM DOS REPASSES - DESIGN TOKENS & SYSTEM VARIABLES
+   Aesthetics: High-Performance Automotive Luxury & OLED Dark Architecture
+   ========================================================================== */
+
+:root {
+  /* Surface & Substrate (OLED Automotive Blacks) */
+  --bg-darkest: #060709;
+  --bg-main: #0B0D12;
+  --bg-card: #11141D;
+  --bg-card-hover: #161B27;
+  --bg-surface-elevated: #1B2130;
+  --bg-glass: rgba(15, 19, 28, 0.72);
+  --bg-glass-strong: rgba(11, 13, 18, 0.88);
+
+  /* Primary Accent: Race Crimson & Speed Red */
+  --color-crimson: #FF1E27;
+  --color-crimson-bright: #FF3B43;
+  --color-crimson-dark: #C60710;
+  --color-crimson-glow: rgba(255, 30, 39, 0.35);
+  --color-crimson-subtle: rgba(255, 30, 39, 0.12);
+
+  /* Secondary Accent: Trophy Gold / Championship Amber */
+  --color-gold: #F59E0B;
+  --color-gold-bright: #FBBF24;
+  --color-gold-glow: rgba(245, 158, 11, 0.28);
+  --color-gold-subtle: rgba(245, 158, 11, 0.12);
+
+  /* Metallic Chrome & Titanium Highlights */
+  --color-titanium-100: #FFFFFF;
+  --color-titanium-200: #F1F5F9;
+  --color-titanium-300: #E2E8F0;
+  --color-titanium-400: #CBD5E1;
+  --color-titanium-500: #94A3B8;
+  --color-titanium-600: #64748B;
+  --color-titanium-700: #334155;
+
+  /* Functional Accents */
+  --color-success: #10B981;
+  --color-success-glow: rgba(16, 185, 129, 0.25);
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128C7E;
+  --color-whatsapp-glow: rgba(37, 211, 102, 0.3);
+
+  /* Borders, Hairlines & Ring Highlights */
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-metallic: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.03) 40%, rgba(255,30,39,0.25) 100%);
+  --border-gold-metallic: linear-gradient(135deg, rgba(245,158,11,0.5) 0%, rgba(255,255,255,0.05) 50%, rgba(245,158,11,0.2) 100%);
+  --border-focus: rgba(255, 30, 39, 0.6);
+
+  /* Typography Scale - Proporcional, moderno e equilibrado */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.8);
+  --shadow-bezel: 0 20px 50px -10px rgba(0, 0, 0, 0.85), 0 0 25px rgba(255, 30, 39, 0.08);
+  --shadow-glow-crimson: 0 0 40px rgba(255, 30, 39, 0.22);
+  --shadow-glow-gold: 0 0 30px rgba(245, 158, 11, 0.2);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Motion & Spring Dynamics */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
+  --transition-fast: 0.2s var(--ease-fluid);
+  --transition-normal: 0.35s var(--ease-spring);
+  --transition-slow: 0.6s var(--ease-spring);
+}
